@@ -3,8 +3,12 @@ const tareaInput = document.querySelector("#nuevaTarea");
 const btnAgregar = document.querySelector("#agregarTarea");
 const cuentaTareas = document.querySelector("#cuenta-tareas");
 const tareasRealizadas = document.querySelector("#tareas-realizadas");
-let tareas = [];
-let contadorTareas = 1; 
+let tareas = [
+  {id: 1, tarea: 'Maqueta HTML', complete: true},
+  {id: 2, tarea: 'Linkear CSS', complete: true},
+  {id: 3, tarea: 'Definir var en JS', complete: false}
+];
+let contadorTareas = 4; 
 
 btnAgregar.addEventListener("click", () => {
   const tarea = tareaInput.value;
@@ -12,6 +16,7 @@ btnAgregar.addEventListener("click", () => {
   tareaInput.value = "";
   renderList(tareas);
 });
+renderList(tareas);
 
 function renderList(tareas) {
   let html = "";
