@@ -1,0 +1,114 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(25,25,144,1) 0%, rgba(22,159,56,0.8283062645011601) 100%);
+    padding: 10px;
+}
+h3{
+    width: 100%;
+    max-width: 540px;
+    background: transparent;
+    opacity: 0.8;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; 
+}
+.todo {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo h2{
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo h2 i{
+    width: 30px;
+    margin-left: 10px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(197, 197, 197);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background:rgba(31, 121, 156, 0.288);
+    color: white;
+    border-radius: 50px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background: url(../img/checkbox-blank-circle-line.svg);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.check{
+    text-decoration: line-through;
+    color: black;
+}
+ul li.unchecked{
+    text-decoration: none;
+    color: black;
+}
+ul li.check::before{
+    background: url(../img/checkbox-circle-fill.svg);
+}
+.btnDelete{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #1d1b1b;
+    text-align: center;
+
+}
+
+.btnDelete:hover{
+background: rgb(92, 107, 141);
+opacity: 0.2;
+
+}
